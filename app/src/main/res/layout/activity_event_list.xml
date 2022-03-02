@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:background="#420202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="start"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/event"
+                    android:layout_width="36dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="36dp"/>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="16dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="Select Event Date"/>
+
+        <Button
+            android:id="@+id/date1"
+            android:background="#420202"
+            android:text="Date"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="Enter Venue"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:hint="Venue"
+            android:id="@+id/venue"
+            android:maxLines="2"
+            android:layout_marginRight="16dp"/>
+
+
+        <Button
+            android:id="@+id/submit1"
+            android:background="#420202"
+            android:text="Submit"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/allevents"/>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
